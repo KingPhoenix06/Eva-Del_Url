@@ -47,14 +47,14 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('♻️ Ꭺᴅᴅ Ꮇᴇ Ͳᴏ Ⴎʀ Ꮐʀᴘ ♻️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('𝗗ɪsᴄᴜssɪᴏɴ ❤️‍', url='https://t.me/AMD_Discussion'),
+            InlineKeyboardButton('❤️‍🔥 𝗗ɪsᴄᴜssɪᴏɴ', url='https://t.me/AMD_Discussion'),
             InlineKeyboardButton('🤖 𝗨ᴘᴅᴀᴛᴇs', url='https://t.me/AMD_LinkZz')
             ],[
             InlineKeyboardButton('🧐 𝗦ᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('')
+            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ,  url='https://t.me/Crazy_Phonix')
             ],[
-            InlineKeyboardButton('💜𝗛ᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('🫠 🅰️🅱️🅾️🆄🆃', callback_data='about')
+            InlineKeyboardButton('💜 𝗛ᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('🫠 𝗔ʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -73,7 +73,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🔥 JOIИ UᎮDΛTΞS CHΛИИΞL 🔥", url=invite_link.invite_link
+                    "❤️‍𝗝ᴏɪɴ 𝗧ᴏ 【𝗔𝗠𝗗】🅻🅸🅽🅺🆉🆉🔥❤️‍🔥", url=invite_link.invite_link
                 )
             ]
         ]
@@ -94,13 +94,16 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+             InlineKeyboardButton('♻️ Ꭺᴅᴅ Ꮇᴇ Ͳᴏ Ⴎʀ Ꮐʀᴘ ♻️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/c/GreyMattersBot'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/greymatter_bots')
+            InlineKeyboardButton('❤️‍🔥 𝗗ɪsᴄᴜssɪᴏɴ', url='https://t.me/AMD_Discussion'),
+            InlineKeyboardButton('🤖 𝗨ᴘᴅᴀᴛᴇs', url='https://t.me/AMD_LinkZz')
             ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('🧐 𝗦ᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ,  url='https://t.me/Crazy_Phonix')
+            ],[
+            InlineKeyboardButton('💜 𝗛ᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('🫠 𝗔ʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -117,7 +120,7 @@ async def start(client, message):
         file_id = data
         pre = ""
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply("<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙵𝙸𝙻𝙴𝚂.../</b>")
+        sts = await message.reply("<b>𝗔ᴄᴄssɪɴɢ 𝗙ɪʟᴇ.../</b>")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -127,7 +130,7 @@ async def start(client, message):
                     msgs=json.loads(file_data.read())
             except:
                 await sts.edit("FAILED")
-                return await client.send_message(LOG_CHANNEL, "UNABLE TO OPEN FILE.")
+                return await client.send_message(LOG_CHANNEL, "𝗨ɴᴀʙʟᴇ 𝗧ᴏ 𝗢ᴘᴇɴ 𝗙ɪʟᴇ.")
             os.remove(file)
             BATCH_FILES[file_id] = msgs
         for msg in msgs:
@@ -165,7 +168,7 @@ async def start(client, message):
         await sts.delete()
         return
     elif data.split("-", 1)[0] == "DSTORE":
-        sts = await message.reply("<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙵𝙸𝙻𝙴𝚂.../</b>")
+        sts = await message.reply("<b>𝗔ᴄᴄssɪɴɢ 𝗙ɪʟᴇ.../</b>")
         b_string = data.split("-", 1)[1]
         decoded = (base64.urlsafe_b64decode(b_string + "=" * (-len(b_string) % 4))).decode("ascii")
         try:
@@ -250,7 +253,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/c/GreyMattersBot') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗝ᴏɪɴ 𝗡ᴏᴡ', url='https://t.me/AMD_LinkZz') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
@@ -318,7 +321,7 @@ async def delete(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        await msg.edit('**𝙵𝙸𝙻𝙴 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙳𝙴𝙻𝙴𝚃𝙴𝙳**')
+        await msg.edit('**𝗙ɪʟᴇ 𝗗ᴇʟᴇᴛᴇᴅ 𝗦ᴜᴄᴄᴇssғᴜʟʟʏ**')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -327,7 +330,7 @@ async def delete(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            await msg.edit('**𝙵𝙸𝙻𝙴 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙳𝙴𝙻𝙴𝚃𝙴𝙳**')
+            await msg.edit('**𝗙ɪʟᴇ 𝗗ᴇʟᴇᴛᴇᴅ 𝗦ᴜᴄᴄᴇssғᴜʟʟʏ**')
         else:
             # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
@@ -337,7 +340,7 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('**𝙵𝙸𝙻𝙴 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙳𝙴𝙻𝙴𝚃𝙴𝙳**')
+                await msg.edit('**𝗙ɪʟᴇ 𝗗ᴇʟᴇᴛᴇᴅ 𝗦ᴜᴄᴄᴇssғᴜʟʟʏ**')
             else:
                 await msg.edit('File not found in database')
 
@@ -350,12 +353,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⚡ 𝐘𝐞𝐬 ⚡", callback_data="autofilter_delete"
+                        text="💔 𝗬ᴇs", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="❄ 𝐂𝐚𝐧𝐜𝐞𝐥 ❄", callback_data="close_data"
+                        text="🔐 𝗖ᴀɴᴄᴇʟ", callback_data="close_data"
                     )
                 ],
             ]
@@ -413,61 +416,61 @@ async def settings(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    '𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐔𝐓𝐓𝐎𝐍',
+                    '𝗙ɪʟᴛᴇʀ 𝗕ᴜᴛᴛᴏɴ',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '𝐒𝐈𝐍𝐆𝐋𝐄' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',
+                    '𝗦ɪɴɢʟᴇ' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐁𝐎𝐓 𝐏𝐌',
+                    '𝗕ᴏᴛ 𝗣ᴍ',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["botpm"] else '❌ 𝐍𝐎',
+                    '✅ 𝗬ᴇs' if settings["botpm"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐅𝐈𝐋𝐄 𝐒𝐄𝐂𝐔𝐑𝐄',
+                    '𝗙ɪʟᴇ 𝗦ᴇᴄᴜʀᴇ',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["file_secure"] else '❌ 𝐍𝐎',
+                    '✅ 𝗬ᴇs' if settings["file_secure"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐈𝐌𝐃𝐁',
+                    '𝗜ᴍʙᴅ',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["imdb"] else '❌ 𝐍𝐎',
+                    '✅ 𝗬ᴇs' if settings["imdb"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊',
+                    '𝗦ᴘᴇʟʟ 𝗖ʜᴇᴄᴋ',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["spell_check"] else '❌ 𝐍𝐎',
+                    '✅ 𝗬ᴇs' if settings["spell_check"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐖𝐄𝐋𝐂𝐎𝐌𝐄',
+                    '𝗪ᴇʟᴄᴏᴍᴇ',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["welcome"] else '❌ 𝐍𝐎',
+                    '✅ 𝗬ᴇs' if settings["welcome"] else '❌ 𝐍𝐎',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
             ],
@@ -526,4 +529,4 @@ async def save_template(client, message):
         return await sts.edit("No Input!!")
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚄𝙿𝙶𝚁𝙰𝙳𝙴𝙳 𝚈𝙾𝚄𝚁 𝚃𝙴𝙼𝙿𝙻𝙰𝚃𝙴 𝙵𝙾𝚁 {title} to\n\n{template}")
+    await sts.edit(f"𝚂uccessfully 𝚄pgraded 𝚈our 𝚃emplate 𝙵or {title} to\n\n{template}")
