@@ -51,7 +51,7 @@ async def start(client, message):
             InlineKeyboardButton('🤖 𝗨ᴘᴅᴀᴛᴇs', url='https://t.me/AMD_LinkZz')
             ],[
             InlineKeyboardButton('🧐 𝗦ᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ,  url='https://t.me/Crazy_Phonix')
+            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ',  url='https://t.me/Crazy_Phonix')
             ],[
             InlineKeyboardButton('💜 𝗛ᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🫠 𝗔ʙᴏᴜᴛ', callback_data='about')
@@ -100,7 +100,7 @@ async def start(client, message):
             InlineKeyboardButton('🤖 𝗨ᴘᴅᴀᴛᴇs', url='https://t.me/AMD_LinkZz')
             ],[
             InlineKeyboardButton('🧐 𝗦ᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ,  url='https://t.me/Crazy_Phonix')
+            InlineKeyboardButton('😎 𝗖ʀᴇᴀᴛᴏʀ',  url='https://t.me/Crazy_Phonix')
             ],[
             InlineKeyboardButton('💜 𝗛ᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('🫠 𝗔ʙᴏᴜᴛ', callback_data='about')
