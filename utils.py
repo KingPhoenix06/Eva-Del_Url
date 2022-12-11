@@ -169,6 +169,7 @@ async def search_gagala(text):
     return [title.getText() for title in titles]
 
 
+
 async def get_settings(group_id):
     settings = temp.SETTINGS.get(group_id)
     if not settings:
