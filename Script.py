@@ -109,11 +109,11 @@ This module only works for my admins
 ★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#𝗡ᴇᴡ 𝗚ʀᴏᴜᴘ
     
-<b>᚛› 𝗚ʀᴏᴜᴘ 𝗚ʀᴏᴜᴘ⪼ {}(<code>{}</code>)</b>
+<b>᚛› 𝗚ʀᴏᴜᴘ ⪼ {}(<code>{}</code>)</b>
 <b>᚛› 𝗧ᴏᴛᴀʟ 𝗠ᴇᴍʙᴇʀs𝐬 ⪼ <code>{}</code></b>
 <b>᚛› 𝗔ᴅᴅᴇᴅ 𝗕ʏ ⪼ {}</b>
 """
-    LOG_TEXT_P = """#𝗡ᴇᴡ 𝗨sᴇʀ  
+    LOG_TEXT_P = """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫  
     
 <b>᚛› 𝗜ᴅ - <code>{}</code></b>
 <b>᚛› 𝗡ᴀᴍᴇ - {}</b>
