@@ -113,7 +113,7 @@ This module only works for my admins
 <b>᚛› 𝗧ᴏᴛᴀʟ 𝗠ᴇᴍʙᴇʀs𝐬 ⪼ <code>{}</code></b>
 <b>᚛› 𝗔ᴅᴅᴇᴅ 𝗕ʏ ⪼ {}</b>
 """
-   LOG_TEXT_P = """#𝗡ᴇᴡ 𝗨sᴇʀ  
+    LOG_TEXT_P = """#𝗡ᴇᴡ 𝗨sᴇʀ  
     
 <b>᚛› 𝗜ᴅ - <code>{}</code></b>
 <b>᚛› 𝗡ᴀᴍᴇ - {}</b>
